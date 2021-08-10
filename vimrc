@@ -1,10 +1,31 @@
-" setting
-" プラグイン
-filetype plugin indent on
+set nocompatible
+filetype off
 
+set rtp+=~/.vim/plugin/Vundle.vim
+call vundle#begin()
+
+Plugin 'preservim/nerdtree'
+Plugin 'dense-analysis/ale'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-repeat'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'ervandew/supertab'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'jacquesbh/vim-showmarks'
+
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+
+syntax on
 " 全般
 "文字コードをUFT-8に設定
-set fenc=utf-8
+"set fenc=utf-8
+" VIMの内部エンコードをUTF-8とする
+set encoding=UTF-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -17,12 +38,18 @@ set hidden
 set showcmd
 " クリップボードの共有
 set clipboard+=unnamed
+" 選択時にクリップボードに入る
+" set guioptions+=a
 " ステータスラインの表示
 set laststatus=2
 colorscheme desert
-" let g:lightline = { 'colorscheme': 'molokai' }
+set t_ut=
 " etcをjjにする
 inoremap <silent> jj <ESC>
+" バックスペースの挙動を通常と同じにする
+set backspace=2
+let mapleader = "\<Space>"
+
 
 " 見た目系
 " 行番号を表示
@@ -35,6 +62,8 @@ set cursorline
 set virtualedit=onemore
 " インデントはスマートインデント
 set smartindent
+" 改行時にインデントを保持する
+set autoindent
 " ビープ音を可視化
 set visualbell
 " 括弧入力時の対応する括弧を表示
@@ -50,6 +79,9 @@ nnoremap k gk
 syntax enable
 " インデントを現在の行と合わせる
 set autoindent
+" 通常文字列の文字色を黄色にする
+hi Constant ctermfg=14
+map <C-n> :NERDTreeToggle<CR>
 
 
 " Tab系
@@ -77,10 +109,14 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 検索後にジャンプした際に検索単語を画面中央に持ってくる
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
+" nnoremap n nzz
+" nnoremap N Nzz
+" nnoremap * *zz
+" nnoremap # #zz
+"半角文字の設定
+set guifont=MS_Gothic:h10
+"全角文字の設定
+set guifontwide=MS_Gothic:h10
 
 " マウス系
 set mouse=a
