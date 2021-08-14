@@ -40,8 +40,6 @@ set showcmd
 set clipboard+=unnamed
 " 選択時にクリップボードに入る
 " set guioptions+=a
-" ステータスラインの表示
-set laststatus=2
 colorscheme desert
 set t_ut=
 " etcをjjにする
@@ -50,6 +48,15 @@ inoremap <silent> jj <ESC>
 set backspace=2
 let mapleader = "\<Space>"
 
+" ALEのエラーの設定
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '⚠'
+"let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+"let g:ale_sign_column_always = 1
+"let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 1
+" エラーと警告がなくなっても開いたままにする
+"let g:ale_keep_list_window_open = 1
 
 " 見た目系
 " 行番号を表示
@@ -70,6 +77,10 @@ set visualbell
 set showmatch
 " ステータスラインを常に表示
 set laststatus=2
+" ファイル名を表示
+set statusline=%f
+" 現在行数/全行数
+set statusline+=[LOW=%l/%L]
 " コマンドラインの補完
 set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
