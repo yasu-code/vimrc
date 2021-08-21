@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/plugin/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'preservim/nerdtree'
@@ -15,6 +15,9 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jacquesbh/vim-showmarks'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'prettier/vim-prettier'
+Plugin 'alvan/vim-closetag'
 
 call vundle#end()            " required
 
@@ -94,6 +97,8 @@ set autoindent
 hi Constant ctermfg=14
 map <C-n> :NERDTreeToggle<CR>
 
+" タブを自動で閉じるファイルを指定
+let g:closetag_filenames = '*.html,*.vue'
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
