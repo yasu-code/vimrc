@@ -1,0 +1,90 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  nnoremap <C-n> :NERDTreeToggle<CR>
+  nnoremap <C-f> :NERDTreeFind<CR>
+'''
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
+
+[[plugins]]
+repo = 'prettier/vim-prettier'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set signcolumn=yes
+  set updatetime=1000
+  nnoremap [gitgutter] <Nop>
+  nmap <C-h> [gitgutter]
+  nmap [gitgutter]j <Plug>GitGutterNextHunk
+  nmap [gitgutter]k <Plug>GitGutterPrevHunk
+  nmap [gitgutter]u <Plug>GitGutterUndoHunk
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  command Gst :Gstatus
+  command Gdf :Gdiff
+  command Gbl :Gblame
+'''
+
+[[plugins]]
+# repo = 'osyo-manga/vim-anzu'
+# hook_add = '''
+#   nmap m <Plug>(anzu-n-with-echo)
+#   nmap M <Plug>(anzu-N-with-echo)
+#   nmap * <Plug>(anzu-star)
+#   nmap # <Plug>(anzu-sharp)
+# '''
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+repo = 'tpope/vim-commentary'
+repo = 'tpope/vim-surround'
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+repo = 'airblade/vim-gitgutter'
+repo = 'tpope/vim-repeat'
+repo = 'junegunn/vim-easy-align'
+repo = 'ervandew/supertab'
+repo = 'jiangmiao/auto-pairs'
+repo = 'jacquesbh/vim-showmarks'
+repo = 'dhruvasagar/vim-table-mode'
+repo = 'prettier/vim-prettier'
+repo = 'alvan/vim-closetag'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
